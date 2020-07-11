@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="css/newsletter-style.css">
   
   <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+  
 		
 	</head>
 
-	<body>
-
+	<body onload="preloaderFunction()">
+			<div id="preloader"></div>
 			<div id="particles-js"></div>
 		
 			<ul class="cb-slideshow">
@@ -86,4 +87,10 @@
 	const db = firebase.firestore();
 	</script>
 	<script src="./js/firebase.js"></script>
+	<script>
+		const preloader = document.getElementById("preloader");
+		const preloaderFunction = () =>{
+			preloader.style.display = "none"
+		};
+	</script>
 </html>
